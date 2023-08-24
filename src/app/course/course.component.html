@@ -1,0 +1,12 @@
+ <app-navbar></app-navbar>
+ <div class="course-container">
+
+    <h1>{{course.name}}</h1>
+</div>
+
+<div class="user-details">
+    <div style="margin: 0px 10px;"><b>Id: </b> {{course.id}}</div>
+    <div style="margin: 0px 10px;"><b>Name: </b> {{course.name}}</div>
+    <div style="margin: 0px 10px;"><b>Salary: </b> {{course.salary | currency: 'INR'}}</div>
+    <div style="margin: 0px 10px;"><b>Content: </b> {{course.content}}</div>
+</div>

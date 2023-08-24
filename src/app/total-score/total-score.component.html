@@ -1,0 +1,36 @@
+
+
+    <table class="table">
+        <table class="table ">
+            <thead>
+                <tr >
+                  <th scope="col">#</th>
+                  <th scope="col"> Name</th>
+                  <th scope="col">Marks</th>
+                  <th scope="col">Add Total Marks</th>
+                  
+                </tr>
+              </thead>
+              <tbody>
+                <tr [ngStyle]="{ 'background-color':students.isdisableButton ? 'lightblue': 'white'}"*ngFor="let students of students let i = index">
+                    <th  >{{i + 1}}</th>
+                    <td >{{students.name}} </td>
+                  <td>{{students.marks}}</td>
+                 
+                    <td> <button [disabled]="students.isdisableButton"  (click)="addMarks(i)">Calculate Total
+                        
+                      </button>
+                    </td> 
+                  
+                </tr>
+              
+              </tbody>
+        
+        </table>
+        <div class="buttons1">
+        <h2 appTextHighlight>Total Marks : {{totalMarks}} </h2>
+<h3>Total Percentage: {{totalPercentage}}% </h3>
+<button class="btn btn-primary" (click)="totalP()">Percentage</button>
+
+<button class="btn btn-primary"(click)="resetmarks(); resetP()">Reset</button>
+</div>
